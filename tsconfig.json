@@ -12,12 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@shared/*": ["shared/*"],
-      "@statics/*": ["statics/*"],
-      "@themes/*": ["themes/*"]
-    }
+    "baseUrl": "./src"
   },
-  "exclude": ["dist", "node_modules", "src/**/*.test.tsx"]
+  "exclude": ["dist", "node_modules"]
 }

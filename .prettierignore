@@ -4,3 +4,7 @@ dist/
 coverage/
 
 .husky/
+
+.eslintcache
+
+.storybook

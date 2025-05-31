@@ -1,0 +1,39 @@
+
+# Ignore development folders
+.storybook/
+.vscode/
+.husky/
+src/
+docs/
+node_modules/
+e2e/
+
+# Ignore output not intended for publishing
+build/
+coverage/
+*.log
+
+# Ignore configuration and tooling files
+.eslintrc.js
+.prettierrc
+.prettierignore
+babel.config.js
+jest.config.ts
+jest.setup.ts
+tsconfig.json
+tsconfig.eslint.json
+rollup.config.cjs
+Dockerfile
+.nvmrc
+.commitlintrc.json
+.editorconfig
+.lintstagedrc
+
+# Ignore hidden system files
+.DS_Store
+
+# Exclude local test and meta files
+*.jpeg
+*.png
+*.txt
+*.mdx

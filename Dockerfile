@@ -1,17 +1,11 @@
-FROM node:14-alpine AS build
+FROM node:22.16.0-alpine
 
-RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
+WORKDIR /app
 
-USER node
+COPY . .
 
-WORKDIR /usr/src/node-app
-
-COPY --chown=node:node . .
-
-RUN npm install
-
-RUN npm run build:storybook
+RUN npm install -g serve && npm install && npm run build:storybook
 
 EXPOSE 6006
 
-CMD npm run storybook
+CMD ["serve", "-s", "build", "-l", "6006"]

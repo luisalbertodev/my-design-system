@@ -1,28 +1,33 @@
 // jest.config.ts
-import type { Config } from "@jest/types";
+import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
   // Use ts-jest to transpile TypeScript
-  preset: "ts-jest",
+  preset: 'ts-jest',
 
   // Test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Collect coverage information
   collectCoverage: true,
-  coverageDirectory: "coverage",
-  coverageReporters: ["json", "html", "text", "lcov"],
-  collectCoverageFrom: ["<rootDir>/src/**/*.ts", "<rootDir>/src/**/*.tsx"],
-  coveragePathIgnorePatterns: [
-    "/node_modules/",
-    "/src/index.ts",
-    "/src/types.d.ts",
-    "\\.story\\..+",
-    "\\.example\\..+",
-    "index\\.ts$",
-    "\\.types\\.ts$",
-    "\\.test\\.(js|ts|tsx)$",
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{ts,tsx}',
+    '!<rootDir>/src/index.ts',
+    '!<rootDir>/src/**/*.d.ts',
   ],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/coverage/',
+    '/.storybook/',
+    '/src/types.d.ts',
+    '\\.story\\..+',
+    '\\.stories\\.(ts|tsx)$',
+    '\\.(test|spec)\\.(ts|tsx)$',
+    'index\\.ts$',
+  ],
+  coverageReporters: ['json', 'html', 'text', 'lcov'],
   coverageThreshold: {
     global: {
       branches: 80,
@@ -33,7 +38,11 @@ const config: Config.InitialOptions = {
   },
 
   // Glob patterns Jest uses to detect test files
-  testMatch: ["<rootDir>/src/**/*.test.ts", "<rootDir>/src/**/*.test.tsx"],
+  testMatch: [
+    '<rootDir>/src/**/*.*.test.{ts,tsx}',
+    '<rootDir>/src/**/*.*.spec.{ts,tsx}',
+    '!**/*.stories.{ts,tsx}',
+  ],
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
@@ -42,19 +51,19 @@ const config: Config.InitialOptions = {
   verbose: true,
 
   // Setup scripts that run before each test suite
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 
   // Module name mappings for static assets and style imports
   moduleNameMapper: {
-    "\\.(jpg|jpeg|png|svg)$": "<rootDir>/__mocks__/fileMock.ts",
-    "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.ts",
+    '\\.(jpg|jpeg|png|svg)$': '<rootDir>/__mocks__/fileMock.ts',
+    '\\.(css|less|scss|sass)$': '<rootDir>/__mocks__/styleMock.ts',
   },
 
   // Transform configuration for ts-jest
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  transformIgnorePatterns: ["/node_modules/"],
+  transformIgnorePatterns: ['/node_modules/'],
 };
 
 export default config;
