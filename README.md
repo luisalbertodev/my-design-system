@@ -49,16 +49,23 @@ npm run test:coverage     # full coverage report
 
 ## 📦 Usage in Projects
 
-This library is not published on npm.
+This library is **published on npm** under the name [`@luisalbertodev/my-design-system`](https://www.npmjs.com/package/@luisalbertodev/my-design-system) — **as a technical practice only**.
+It is **not intended for production usage**, and no guarantees are provided for stability or updates.
 
-You can consume it via local linking:
+Install (for demo/testing purposes only):
+
+```bash
+npm install @luisalbertodev/my-design-system
+```
+
+> ✅ Recommended usage: fork and adapt to your own design system needs.
+
+Alternatively, you can consume it locally:
 
 ```bash
 npm run build
 npm link
 ```
-
-> Optionally, prepare for publishing by running `npm publish`.
 
 ---
 
