@@ -8,7 +8,7 @@
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "rollup -c",
-    "build:storybook": "storybook build -o ./build -c .storybook",
+    "build:storybook": "storybook build -o ./storybook-static -c .storybook",
     "storybook:dev": "storybook dev -p 6006",
     "test": "NODE_ENV=test jest",
     "test:ci": "jest --ci --coverage --watchAll=false",

@@ -9,8 +9,9 @@ node_modules/
 e2e/
 
 # Ignore output not intended for publishing
-build/
+storybook-static/
 coverage/
+build/
 *.log
 
 # Ignore configuration and tooling files
