@@ -1,7 +1,7 @@
 {
   "name": "@luisalbertodev/my-design-system",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Luis Alberto Pérez Coello",
   "keywords": [],
   "main": "dist/cjs/index.js",
