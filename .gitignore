@@ -18,5 +18,6 @@
 npm-debug.log*
 build-storybook.log*
 *storybook.log
+/test-results
 
 src/stories/*

@@ -2,7 +2,7 @@ node_modules
 dist/
 build/
 storybook-static/
-
+test-results/
 coverage/
 
 .husky/

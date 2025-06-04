@@ -3,4 +3,5 @@ dist
 build
 storybook-static
 coverage
+test-results
 *.d.ts
