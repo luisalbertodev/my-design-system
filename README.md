@@ -42,6 +42,7 @@ npm run build:storybook
 npm run test              # all tests
 npm run test:unit         # unit tests
 npm run test:integration  # integration tests
+npm run test:e2e          # e2e tests
 npm run test:coverage     # full coverage report
 ```
 
@@ -94,13 +95,7 @@ Testing is split into:
 
 - Unit
 - Integration
-- E2E (via Playwright – WIP)
-
-Run E2E (once implemented):
-
-```bash
-npx playwright test
-```
+- E2E (via Playwright)
 
 ---
 
