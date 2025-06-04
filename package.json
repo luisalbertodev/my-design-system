@@ -3,7 +3,39 @@
   "license": "MIT",
   "version": "0.1.2",
   "author": "Luis Alberto Pérez Coello",
-  "keywords": [],
+  "description": "A modern React + TypeScript component library boilerplate focused on accessibility, testing, and composability.",
+  "bugs": {
+    "url": "https://github.com/luisalbertodev/my-design-system/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "design-system",
+    "component-library",
+    "storybook",
+    "jest",
+    "playwright",
+    "rollup",
+    "eslint",
+    "prettier",
+    "husky",
+    "commitlint",
+    "accessibility",
+    "a11y",
+    "object-oriented programming",
+    "oop",
+    "solid principles",
+    "design patterns"
+  ],
+  "homepage": "https://www.npmjs.com/package/@luisalbertodev/my-design-system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luisalbertodev/my-design-system.git",
+    "directory": "."
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -32,7 +64,6 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
-  "description": "",
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
